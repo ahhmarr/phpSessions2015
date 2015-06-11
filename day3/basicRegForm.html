@@ -5,7 +5,7 @@
 	<title>basic form</title>
 </head>
 <body>
-	<form action="#">
+	<form action="#" method="post">
 	<!-- using div so that elements can be enclosed in block scope -->
 		<div>
 			<label for="username">username</label>
@@ -38,9 +38,13 @@
 			<!-- no for value because no specific id for this label -->
 			<label for="">Preferred Language</label>
 			<label for="Eng">Eng</label>
-			<input type="radio" name="gender" id="Eng" value="1">
+			<input type="radio" name="lang" id="Eng" value="1">
 			<label for="hindi">hindi</label>
-			<input type="radio" name="gender" id="hindi" value="1">
+			<input type="radio" name="lang" id="hindi" value="1">
+		</div>
+		<div>
+			<input type="submit" value="Create">
+			<input type="reset" value="reset values">
 		</div>
 	</form>
 </body>
