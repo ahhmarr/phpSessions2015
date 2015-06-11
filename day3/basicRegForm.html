@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>basic form</title>
+</head>
+<body>
+	<form action="#">
+	<!-- using div so that elements can be enclosed in block scope -->
+		<div>
+			<label for="username">username</label>
+			<input type="text" name="username" placeholder="username" id="username">
+		</div>
+		<div>
+			<label for="password">password</label>
+			<input type="password" name="password" placeholder="password" id="password">
+		</div>
+		<div>
+			<label for="country">country</label>
+			<select name="country" placeholder="country" id="country">
+				<option value="1">India</option>
+				<option value="2">Nepal</option>
+				<option value="3">Malaysia</option>
+			</select>
+		</div>
+		<div>
+			<!-- no for value becoause no specific id for this label -->
+			<label for="">gender</label>
+			<label for="male">Male</label>
+			<input type="radio" name="gender" id="male" value="1">
+
+
+			<label for="female">female</label>
+			<input type="radio" name="gender" id="female" value="1">
+		</div>
+
+		<div>
+			<!-- no for value becoause no specific id for this label -->
+			<label for="">Preferred Language</label>
+			<label for="Eng">Eng</label>
+			<input type="radio" name="gender" id="Eng" value="1">
+			<label for="hindi">hindi</label>
+			<input type="radio" name="gender" id="hindi" value="1">
+		</div>
+	</form>
+</body>
+</html>
