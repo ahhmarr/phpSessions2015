@@ -1,0 +1,19 @@
+#first{
+	text-indent: 10px;
+}
+#third{
+	text-indent: 20px;
+}
+#fourth{
+	text-align: center;
+}
+#fifth{
+	text-align: right;
+}
+#second{
+	text-align: center;
+}
+#second img{
+	height:300px;
+	width:300px;
+}
