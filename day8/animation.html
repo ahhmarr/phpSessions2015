@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation example</title>
+	<style type="text/css">
+		 /*animation: example 5s linear 2s infinite alternate;*/
+		@keyframes change-color{
+			from {
+				background-color: #C037D8;
+			}
+			to{
+				background-color: #00C607;
+			}
+		}
+		div{
+			background-color: #ccc;
+			animation:change-color;
+			animation-duration:4s;
+			animation-iteration-count:infinite;
+			top:100px;
+		}
+		@keyframes span-move{
+			0%{
+				top:100px;
+			}
+			20%{
+				top: 125px;
+			}
+			30%{
+				top:150px;
+			}
+			60%{
+				top:250px;
+			}
+			90%{
+				top:300px;
+			}
+			100{
+				top: 350px;
+			}
+		}
+		#relative-span{
+			position: relative;
+			animation:span-move;
+			animation-duration:10s;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+			animation-direction:alternate;
+		}
+		#transition{
+			background-color: red;
+			width:400px;
+			 transition-property:all;
+			transition-duration:10s;
+			transition-timing-function:linear;
+			transition-delay:0s; 
+		}
+		#transition:hover{
+			width:900px;
+		}
+	</style>
+</head>
+<body>
+	<p id="transition">transition</p>
+	<div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+	<span id="relative-span">
+	some text
+	</span>
+</body>
+</html>
