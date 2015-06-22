@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>text box example</title>
+</head>
+<body>
+	<!-- <input type="range" id="slider" max="10" min="0" step="1" value="0" onchange ="sliderChange()"> -->
+	<input type="number" onkeydown="add()" id="number1">
+	<input type="number" id="number2" onkeydown="add()">
+	<input type="button" value="add" onclick="add()">
+	<input type="number" readonly="readonly" id="sum">
+	<script type="text/javascript">
+	var add=function()
+	{
+		var a=document.querySelector("#number1").value;	
+		var b=document.querySelector("#number2").value;
+		a=parseInt(a);
+		b=parseInt(b);
+		var sum=a+b;
+		document.querySelector("#sum").value=sum;
+	};
+	var sliderChange=function()
+	{
+		var slider=document.querySelector("#slider");
+		console.log(slider.value);	
+	};
+	</script>
+</body>
+</html>

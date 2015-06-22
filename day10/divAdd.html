@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>div add</title>
+</head>
+<body>
+	<div id="number1">-100</div>
+	<div id="number2">99</div>
+	<input type="button" value="add both divs values" onclick ="add()">
+	<div id="sum">0</div>
+	<script type="text/javascript">
+
+	var add=function()
+	{
+		// getting both divs references
+		var number1=document.querySelector("#number1");
+		var number2=document.querySelector("#number2");
+		var a=parseInt(number1.innerText);
+		var b=parseInt(number2.innerText);
+		var c=a+b;
+		var sum=document.querySelector("#sum");
+		sum.innerText=c;
+	};
+	</script>
+</body>
+</html>

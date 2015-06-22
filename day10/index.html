@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM Example</title>
+</head>
+<body>
+	<div id="number">0</div>
+	<div id="my-div">
+		some content of my-div
+	</div>
+	<input type="button" value="read content" onclick="readcontent()">
+	<input type="button" value="change content" onclick="overrideContent()">
+	<input type="button" value="change content in html" onclick="overrideContentHTML()">
+	<input type="button" value="append some text'" onclick="appendText()">
+	<input type="button" value="increement by 1" onclick="increment()">
+	<script type="text/javascript">
+	var readcontent=function()
+	{
+		var div=document.getElementById('my-div');
+		var text=div.innerText;
+		console.log(text);	
+	};
+
+	var overrideContent=function()
+	{
+		var content=prompt("Enter Some content?");	
+		var div=document.getElementById('my-div');
+		div.innerText=content;
+	};
+
+	var overrideContentHTML=function()
+	{
+		var content=prompt("Enter Some content?");	
+		var div=document.getElementById('my-div');
+		div.innerHTML=content;
+	};
+	var appendText=function()
+	{
+		var content=prompt("Enter Some content?");	
+		var div=document.getElementById('my-div');
+		var currentText=div.innerText;
+		currentText=currentText+' '+content;
+		div.innerText=currentText;
+	};
+	var increment=function()
+	{
+		var div=document.querySelector("#number");
+		console.log(div);
+		var value=div.innerText;
+		value=parseInt(value);
+		value=value+1;
+		div.innerText=value;
+	};
+	</script>
+</body>
+</html>
