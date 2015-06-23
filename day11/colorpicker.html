@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>color picker</title>
+	<style type="text/css">
+		input[type="color"]{
+			width:1000px;
+			height:100px;
+		}
+		input[type="text"]{
+			width:1000px;
+			height: 60px;
+			padding:20px;
+			font-size: 38px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<input type="color" id="color" onchange="changeColor()">
+	<input type="text" id="color-value">
+	<script type="text/javascript">
+	var changeColor=function()
+	{
+		var colorbox=document.querySelector("#color");
+		var value=colorbox.value;
+		var text=document.querySelector("#color-value");
+		text.value=value;
+	};
+	</script>
+</body>
+</html>

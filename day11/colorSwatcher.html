@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>color swatcher</title>
+	<style type="text/css">
+		input[type="range"]{
+			width:500px;
+		}
+		span{
+			display: inline-block;
+			width:100px;
+		}
+	</style>
+</head>
+<body id="html-body">
+	<div>
+		<span>Red</span><input type="range" onchange="swatchColor()" min="0" max="255" value="0" id="red">
+	</div>
+	<div>
+		<span>Green</span><input type="range" onchange="swatchColor()" min="0" max="255" value="0" id="green">
+	</div>
+	<div>
+		<span>Blue</span><input type="range" onchange="swatchColor()" min="0" max="255" value="0" id="blue">
+	</div>
+	<script type="text/javascript">
+	var swatchColor=function()
+	{
+		var green=document.querySelector("#green");
+		var blue=document.querySelector("#blue");
+		var red=document.querySelector("#red");
+		var g=green.value;var b=blue.value;var r=red.value;
+		var color=('rgb('+r+','+g+','+b+')');
+		addBColorToBody(color);
+	};
+	var addBColorToBody=function(color){
+		var body=document.querySelector("#html-body");
+		body.style.backgroundColor=color;
+	};
+
+	</script>
+</body>
+</html>
