@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dynamic</title>
+</head>
+<body>
+	<div class="dynamic">first</div>
+	<div class="dynamic">second</div>
+	<div class="dynamic">third</div>
+	<div class="dynamic">fourth</div>
+	<div class="dynamic">fifth</div>
+	<script type="text/javascript">
+	window.onload=function()
+	{
+		var d=document.querySelectorAll('.dynamic');
+		console.log(d);
+		for(x=0;x<d.length;x++){
+			d[x].style.padding=x*10+'px';
+		}
+	};
+	</script>
+</body>
+</html>

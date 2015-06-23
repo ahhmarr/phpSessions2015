@@ -1,0 +1,10 @@
+
+#second-div{
+	height:100px;
+	background-color:red;
+}
+#child-div{
+	height:300px;
+	background-color:green;
+	width:500%;
+}
