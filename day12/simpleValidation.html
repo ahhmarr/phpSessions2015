@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple validation</title>
+	<style type="text/css">
+	label{
+		display: inline-block;
+		width:200px;
+	}
+	div{
+		margin-top: 25px;
+	}
+	</style>
+</head>
+<body>
+	<form action="#" onsubmit="return validate()">
+		<div>
+			<label for="firstName">First Name</label>
+			<input type="text" name="firstName" id="firstName">
+		</div>
+		<div>
+			<label for="lastName">Last Name</label>
+			<input type="text" name="lastName" id="lastName">
+		</div>
+		<div>
+			<label for="age">age</label>
+			<input type="text" name="age" id="age">
+		</div>
+		<div>
+			<label for="address">Address</label>
+			<textarea id="address" name="address" rows="7" cols"50"></textarea>
+		</div>
+		<div>
+			<input type="submit" value="submit">
+			<input type="reset" value="reset">
+		</div>
+	</form>
+	<script type="text/javascript">
+	var validate=function()
+	{
+		var firstName=document.querySelector("#firstName");
+		var lastName=document.querySelector("#lastName");
+		var age=document.querySelector("#age");
+		var address=document.querySelector("#address");
+		var flag=true;
+		if(firstName.value===""){
+			flag=false;
+			alert("first name cant be empty");
+		}
+		else{
+			var length=(firstName.value.length);
+			if(length<=3){
+				flag=false;
+				alert("first name cant be less than 3 chars");
+			}
+		}
+		if(lastName.value===""){
+			flag=false;
+			alert("last name cant be empty");
+		}
+		if(age.value===""){
+			flag=false;
+			alert("age cant be empty");
+		}
+		else{
+			var a=parseInt(age.value);
+			if(isNaN(a)===true){
+				flag=false;
+				alert("age cant be string");
+			}
+			else{
+				if(a<18 || a>150){
+					flag=false;
+					alert("only between 18-150");
+				}
+			}
+		}
+		if(address.value!==""){
+			if(address.value.length<5){
+				flag=false;
+				alert("address has to be at least 5 chars long");
+			}
+		}
+		return flag;
+	};
+	</script>
+</body>
+</html>
