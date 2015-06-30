@@ -1,4 +1,5 @@
 <?php 
+$db=mysqli_connect("localhost","root","123456","dummy_database");
 $name=$_GET['name'];
 $age=$_GET['age'];
 $address=$_GET['address'];
@@ -25,7 +26,11 @@ else {
 	$result="F";
 	$colorClass="fail";
 }
-
+$query="insert into users (name,age,address,course,total,result)
+ values 
+ ('$name','$age','$address','$course','$total','$result')
+ ";
+mysqli_query($db,$query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
